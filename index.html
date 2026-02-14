@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surprise 💖</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <canvas id="butterflies"></canvas>
+
+  <audio id="bgSong" preload="auto">
+    <source src="song.m4a" type="audio/mpeg">
+  </audio>
+
+  <main class="stage" aria-live="polite">
+    <section class="scene is-active" data-scene="1">
+      <div class="glass card">
+        <h1 class="title">What's your name?</h1>
+        <p class="subtitle">Tell me so I can personalize this for you 💕</p>
+        <input type="text" id="nameInput" class="input-field" placeholder="Your name..." />
+        <button class="btn primary" id="btnContinue">Continue ✨</button>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="2">
+      <div class="glass card">
+        <h1 class="title">ARE YOU READY?</h1>
+        <p class="subtitle">I made something special for you.</p>
+        <button class="btn primary" id="btnReady">Yes, I'm ready ✨</button>
+      </div>
+      <div class="hint">Tap the button to begin</div>
+    </section>
+
+    <section class="scene" data-scene="3">
+      <div class="glass card">
+        <h2 class="title small">One more thing…</h2>
+        <p class="subtitle">Close your eyes for a second. Then open. 🌙</p>
+        <button class="btn" id="btnSpark">Okay…</button>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="4">
+      <div class="glass card">
+        <h1 class="title tears-emoji">😭</h1>
+        <h2 class="title small">Close your eyes...</h2>
+        <p class="subtitle">Don't ruin the fun it's all about you. 💕</p>
+        <button class="btn" id="btnCloseEyes">Okay…</button>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="5">
+      <div class="hud">
+        <div class="chip">Look… 💫</div>
+      </div>
+
+      <div id="flowerField" aria-hidden="true">
+        <div class="plant one">
+          <div class="stem"></div>
+          <div class="leaf leafL"></div>
+          <div class="leaf leafR"></div>
+
+          <div class="bud bud1">
+            <div class="bloom">
+              <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span>
+              <span class="petal p4"></span><span class="petal p5"></span><span class="petal p6"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+
+          <div class="bud bud2">
+            <div class="bloom">
+              <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span>
+              <span class="petal p4"></span><span class="petal p5"></span><span class="petal p6"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+
+          <div class="bud bud3">
+            <div class="bloom">
+              <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span>
+              <span class="petal p4"></span><span class="petal p5"></span><span class="petal p6"></span>
+              <span class="center"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="centerNote glass">
+        <div class="pulseDot"></div>
+        <div class="centerText">
+          <div class="kicker">A little flower for you</div>
+          <div class="mini">You deserve all the love 💖</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="6">
+      <div class="glass card final">
+        <div class="badge">💖</div>
+        <div class="final-content">
+          <div class="final-text">
+            <h2 class="title">Happy Valentine's Day <span id="displayName"></span> 💖</h2>
+            <p class="subtitle">Happy Valentine’s Day ODUNAYOMI ❤️
+            <br><br>
+Sometimes I sit and think about how we started as childhood friends just laughing over random things, and now you’ve become someone who feels so special and close to me — like my best friend and my babe at the same time 😄. Life really did something beautiful with our story.
+            <br><br>
+You know me in ways most people don’t, and I love how being around you feels easy and real.(even if it's not physical) We’ve grown up together, seen different versions of each other, and somehow our connection just keeps getting stronger. You make me laugh when I don’t even feel like smiling, and you bring a kind of peace that’s hard to explain.
+            <br><br>
+I appreciate the little things you do — the way you care, the way you listen, and the way you always bring your own unique energy. You make ordinary moments feel special, and honestly, that’s rare. I’m grateful for every memory we’ve created and excited for the ones still waiting for us.
+            <br><br>
+Today, I just want you to know you’re deeply appreciated and valued. Whether we’re joking around, talking seriously, or just existing in the same space, you mean a lot to me. Keep being your amazing self, keep shining, and don’t forget that you’ll always have someone here who genuinely cares about you.
+            <br><br>
+Enjoy your Valentine’s Day 🌹✨.</p>
+          </div>
+          <div class="final-image">
+            <img id="valentineImage" src="images/valentine.jpg.jpeg" alt="Valentine's surprise" />
+          </div>
+        </div>
+        <button class="btn primary" id="btnReplay">Replay</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/fx-stars.js"></script>
+  <script src="js/fx-butterflies.js"></script>
+  <script src="js/fx-flowers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
